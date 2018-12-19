@@ -60,6 +60,27 @@ namespace ACM.BLTest
                     }
                 }
             };
+
+            // Act
+            var actual = orderRepository.RetrieveOrderDisplay(10);
+
+            // Assert
+            Assert.AreEqual(expected.FirstName, actual.FirstName);
+            Assert.AreEqual(expected.LastName, actual.LastName);
+            Assert.AreEqual(expected.OrderDate, actual.OrderDate);
+
+            Assert.AreEqual(expected.ShippingAddress.AddressType, actual.ShippingAddress.AddressType);
+            Assert.AreEqual(expected.ShippingAddress.StreetLine1, actual.ShippingAddress.StreetLine1);
+            Assert.AreEqual(expected.ShippingAddress.City, actual.ShippingAddress.City);
+            Assert.AreEqual(expected.ShippingAddress.State, actual.ShippingAddress.State);
+            Assert.AreEqual(expected.ShippingAddress.Country, actual.ShippingAddress.Country);
+
+            for (int i = 0; i < 1; i++)
+            {
+                Assert.AreEqual(expected.OrderDisplayItemList[i].ProductName, actual.OrderDisplayItemList[i].ProductName);
+                Assert.AreEqual(expected.OrderDisplayItemList[i].OrderQunatity, actual.OrderDisplayItemList[i].OrderQunatity);
+                Assert.AreEqual(expected.OrderDisplayItemList[i].PurchasePrice, actual.OrderDisplayItemList[i].PurchasePrice);
+            }
         }
     }
 }
