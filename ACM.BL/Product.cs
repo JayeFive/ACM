@@ -17,7 +17,7 @@ namespace ACM.BL
             this.ProductId = productId;
         }
 
-        public Decimal? CurrentPrice { get; set; }
+        public decimal? CurrentPrice { get; set; }
         public int ProductId { get; private set; }
         public string ProductName { get; set; }
         public string ProductDescription { get; set; }
