@@ -35,7 +35,7 @@ namespace ACM.BL
                 };
             }
 
-            orderDisplay.orderDisplayItemList = new List<OrderDisplayItem>();
+            orderDisplay.OrderDisplayItemList = new List<OrderDisplayItem>();
 
             // Code that retrieves the order items
 
@@ -48,7 +48,7 @@ namespace ACM.BL
                     PurchasePrice = 15.96m,
                     OrderQunatity = 2
                 };
-                orderDisplay.orderDisplayItemList.Add(orderDisplayItem);
+                orderDisplay.OrderDisplayItemList.Add(orderDisplayItem);
 
                 orderDisplayItem = new OrderDisplayItem()
                 {
@@ -56,7 +56,7 @@ namespace ACM.BL
                     PurchasePrice = 6m,
                     OrderQunatity = 1
                 };
-                orderDisplay.orderDisplayItemList.Add(orderDisplayItem);
+                orderDisplay.OrderDisplayItemList.Add(orderDisplayItem);
             }
             return orderDisplay;
         }
