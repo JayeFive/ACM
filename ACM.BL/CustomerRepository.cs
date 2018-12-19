@@ -8,6 +8,13 @@ namespace ACM.BL
 {
     public class CustomerRepository
     {
+        private AddressRepository addressRepository { get; set; }
+
+        public CustomerRepository()
+        {
+            addressRepository = new AddressRepository();
+        }
+
         /// <Summary>
         /// Retrieve one customer
         /// </Summary>
@@ -15,6 +22,7 @@ namespace ACM.BL
         {
             // Create the instance of the customer class
             var customer = new Customer(customerId);
+            customer.AddressList = addressRepository.RetrieveByCustomerId(customerId).ToList();
 
             // Code that retrieves the defined customer
 
