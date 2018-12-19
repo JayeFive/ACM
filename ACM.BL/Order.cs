@@ -21,24 +21,6 @@ namespace ACM.BL
         public int OrderId { get; private set; }
 
         /// <summary>
-        /// Retrieve one order
-        /// </summary>
-        /// <returns></returns>
-        public Order Retrieve(int orderId)
-        {
-            return new Order();
-        }
-
-        /// <summary>
-        /// Save the current order
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            return true;
-        }
-
-        /// <summary>
         /// Validate the order data
         /// </summary>
         /// <returns></returns>
